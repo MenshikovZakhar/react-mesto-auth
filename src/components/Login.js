@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 function Login(props) {
 
@@ -40,7 +40,6 @@ function Login(props) {
                     required
                 />
                 <button type="submit" className="auth__submit">Войти</button>
-                <p className="auth__caption">Ещё не зарегистрированы? <Link className="auth__caption auth__link" to="/sign-up">Регистрация</Link></p>
             </form>
         </section>
     )

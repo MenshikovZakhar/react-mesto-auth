@@ -54,7 +54,7 @@ function App() {
   }, [])
 
   useEffect(() => {
-    const jwt = localStorage.getItem('jwt');
+    const jwt = localStorage.getItem('token');
     if (jwt) {
       auth.checkToken(jwt)
         .then((res) => {
@@ -66,7 +66,7 @@ function App() {
           console.log(err);
         })
     }
-  }, [history])
+  }, [])
 
   //отправка данных пользователя на сервер
   function handleUpdateUser(data) {
@@ -170,13 +170,14 @@ function App() {
         }
       })
       .catch((err) => {
+        setIsInfoTooltipPopupOpen(true)//открываем попап InfoTooltip
         console.log(err);
       })
   }
 
   //Обработчик завершения сеанса
   function handleSignOut() {
-    localStorage.removeItem("jwt");
+    localStorage.removeItem('token');
     setLoggedIn(false);
     setUserEmail('');
     history.push('/sign-in');
