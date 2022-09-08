@@ -8,7 +8,7 @@
 авторизация с помощью технологии токена JWT. Все запросы на авторизацию, регистрацию работают через сервис https://auth.nomoreparties.co.
 Проект выполнен в рамках учебной программы Яндекс.Практикум по специальности веб-разработчик.
 
-[Ссылка на проект](https://menshikovzakhar.github.io/react-mesto-auth/)
+## [Ссылка на проект](https://menshikovzakhar.github.io/react-mesto-auth/)
 
 ## :hammer: Стэк технологий
 1. HTML,
